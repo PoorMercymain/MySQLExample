@@ -1,0 +1,1 @@
+INSERT INTO item(name, value) values('some_name', 1000)

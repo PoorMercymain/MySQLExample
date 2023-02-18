@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.0.32
+    container_name: MySQLExampleDB
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    volumes:
+      - ./db:/var/lib/mysql
+    ports:
+      - "3306:3306"
